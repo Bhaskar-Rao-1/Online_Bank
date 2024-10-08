@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <ank rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/abs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar{
+        background-color: #333;
+        overflow: hidden;
+    }
+    .navbar a{
+        float: left;
+        overflow: hidden;
+        padding: 14px 16px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+    .subnav{
+        float: left;
+        overflow: hidden;
+    }
+    .subnav .subnavbtn{
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        font-size: 14px;
+        background-color: inherit;
+        color: white;
+        margin: 0;
+    }
+    .navbar a:hover , .subnav:hover .subnavbtn{
+        background-color: red;
+    }
+    .subnav-con{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        background-color: red;
+        width: 100%;
+    }
+    .subnav a{
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        float: left;
+    }
+    .subnav-con a:hover{
+        background-color: white;
+        color: black;
+    }
+    .subnav:hover .subnav-con{
+        display: block;
+    }
+    
+</style>
+<body>
+    <div class="navbar">
+        <a>Home</a>
+        <div class="subnav">
+            <button class="subnavbtn">Customer<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-con">
+        
+                    <a>
+                        Add
+                    </a>
+                    <a>Delete</a>
+                    <a>View</a>
+                    <a>Update</a>
+        
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Services<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-con">
+            
+                    <a>Deposite</a>
+                    <a>Withdrawl</a>
+                    <a>Transfer</a>
+                    <a>View Transaction</a>
+                
+            </div>
+        </div>
+        <a>Logout</a>
+    </div>
+    
+</body>
+</html>

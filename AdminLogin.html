@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="/AdminLogin">AdminLogin</a></li>
+  <li><a href="/CustomerLogin">CustomerLogin</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="/about">About</a></li>
+</ul>
+<div style="padding-left:550px;padding-top:100px;">
+<form method="post" action="AdminLoginCheck">
+<table style="background-color:cyan;">
+<caption><h1>AdminLogin</h1></caption>
+<tr><th>UserName</th><th><input type="text" name="uname" required></th></tr>
+<tr><th>Password</th><th><input type="password" name="pwd" required></th></tr>
+<tr><th><input type="submit" value="Login"></th><th><input type="reset" value="Clear"></th></tr>
+</table>
+</form>
+<h2 style="color:red;">{{msg}}<h2>
+</div>
+</body>
+</html>
+
+
